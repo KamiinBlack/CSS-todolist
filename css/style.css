@@ -1,0 +1,361 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poiret One', cursive;
+  letter-spacing: 1px;
+  scrollbar-width: none;
+}
+body {
+  background: #DA5552;
+  overflow: scroll;
+  height: 100%;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.circle_big {
+  width: 900px;
+  height: 900px;
+  background: rgba(227, 150, 149, 0.2);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  animation: changeShapeColorRotateBig 10s infinite alternate-reverse, spin 45s infinite;
+}
+
+.circle_small {
+  width: 600px;
+  height: 600px;
+  background: rgba(227, 150, 149, 0.2);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  animation: changeShapeColorRotateBig 10s infinite alternate, spin 25s infinite;
+}
+
+.circle_super_small {
+  width: 400px;
+  height: 400px;
+  background: rgba(227, 150, 149, 0.2);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  animation: changeShapeColorRotate 10s infinite alternate-reverse, spin 35s infinite;
+}
+
+@keyframes changeShapeColorRotateBig {
+  0% {
+    border-radius: 45% 40% 45% 50%;
+    background: rgba(227, 150, 149, 0.5);
+  }
+
+  25% {
+    border-radius: 55% 45% 40% 45%;
+    background: rgba(227, 150, 149, 0.4);
+  }
+
+  50% {
+    border-radius: 45% 45% 50% 35%;
+    background: rgba(220, 140, 149, 0.3);
+  }
+
+  75% {
+    border-radius: 45% 30% 40% 45%;
+    background: rgba(227, 150, 149, 0.4);
+  }
+
+  100% {
+    border-radius: 45% 20% 45% 30%;
+    background: rgba(215, 138, 149, 0.5);
+  }
+}
+
+@-webkit-keyframes changeShapeColorRotateBig {
+  0% {
+    border-radius: 45% 40% 45% 50%;
+    background: rgba(227, 150, 149, 0.2);
+  }
+
+  25% {
+    border-radius: 55% 45% 40% 45%;
+    background: rgba(227, 150, 149, 0.4);
+  }
+
+  50% {
+    border-radius: 45% 45% 50% 35%;
+    background: rgba(227, 150, 149, 0.6);
+  }
+
+  75% {
+    border-radius: 45% 30% 40% 45%;
+    background: rgba(227, 150, 149, 0.8);
+  }
+
+  100% {
+    border-radius: 45% 20% 45% 30%;
+    background: rgba(215, 138, 149, 0.9);
+  }
+}
+
+@keyframes changeShapeColorRotate {
+  0% {
+    border-radius: 55% 35% 45% 45%;
+    background: rgba(227, 150, 149, 0.5);
+  }
+
+  25% {
+    border-radius: 45% 30% 40% 45%;
+    background: rgba(227, 150, 149, 0.4);
+  }
+
+  50% {
+    border-radius: 60% 30% 50% 45%;
+    background: rgba(220, 140, 149, 0.3);
+  }
+
+  75% {
+    border-radius: 45% 30% 40% 45%;
+    background: rgba(227, 150, 149, 0.4);
+  }
+
+  100% {
+    border-radius: 45% 33% 45% 50%;
+    background: rgba(215, 138, 149, 0.5);
+  }
+}
+
+@-webkit-keyframes changeShapeColorRotate {
+  0% {
+    border-radius: 55% 35% 45% 45%;
+    background: rgba(227, 150, 149, 0.5);
+  }
+
+  25% {
+    border-radius: 45% 30% 40% 45%;
+    background: rgba(227, 150, 149, 0.4);
+  }
+
+  50% {
+    border-radius: 60% 30% 50% 45%;
+    background: rgba(220, 140, 149, 0.3);
+  }
+
+  75% {
+    border-radius: 45% 30% 40% 45%;
+    background: rgba(227, 150, 149, 0.4);
+  }
+
+  100% {
+    border-radius: 45% 33% 45% 50%;
+    background: rgba(215, 138, 149, 0.5);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.todo-content {
+  max-width: 60rem;
+  margin: 0 auto;
+  color: white;
+  position: relative;
+}
+
+.todo-form {
+  box-shadow: 0 1px 2px #CC444B;
+  border-radius: 25px;
+  padding: 1rem;
+  background: #DA5552;
+}
+
+.todo-form-row {
+  overflow: hidden;
+  /*co zrobić, z zawartością elementu, jeśli wychodzi ona poza jego granice*/
+}
+
+.todo-form-label {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.todo-form-message {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 1rem;
+  height: 10rem;
+  width: 100%;
+  border: 1px solid #DF7373;
+  border-radius: 25px;
+  margin-bottom: 0.5rem;
+  color: white;
+  resize: vertical;
+  background: #DF7373;
+}
+
+.todo-form-message:focus, .todo-form-message:hover {
+  box-shadow: 0 0 5px #CC444B;
+  border: 1px solid #E39695;
+}
+
+.todo-list-search-form {
+  width: 50%;
+  color: white;
+}
+
+.todo-list-search {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  border: 1px solid #E39695;
+  border-radius: 25px;
+  padding: 0.5rem;
+  width: 40%;
+  background: #DF7373;
+  color: white;
+}
+
+.todo-list-search:focus, .todo-list-search:hover {
+  border: 1px solid #CC444B;
+}
+
+.button{
+  padding: 0.8rem 1.6rem;
+  background: #CC444B;
+  color: #E4B1AB;
+  border: 0;
+  border-radius: 25px;
+  outline: 0;
+}
+
+.todo-form-button {
+  transition: background 0.7s;
+  transition: border 0.4s;
+  cursor: pointer;
+  float: right;
+  width: 15%;
+  transition: width 1s ease-in-out;
+}
+
+.todo-form-button:hover {
+  background: #DA5552;
+  border: 1px solid #DF7373;
+  width: 20%;
+}
+
+.todo-color-change{
+  transition: background 0.7s;
+  transition: border 0.4s;
+  cursor: pointer;
+  float: right;
+  width: 5%;
+  transition: width 1s ease-in-out;
+}
+
+.todo-list-title {
+  font-family: 'Fredericka the Great', cursive;
+}
+
+input::placeholder {
+  color: #E4B1AB;
+}
+
+/* tu sa wszystkie dot elementów listy zadan !! */
+.todo-list-content a {
+  font-size: 30px;
+}
+
+.todo-element {
+  border-top: 1px solid #ddd;
+  margin-top: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+}
+
+.todo-element :focus {
+  outline: 1px dotted pink;
+}
+
+.todo-element-bar {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 10px;
+  font-style: italic;
+  letter-spacing: 3px;
+}
+
+.todo-element-date {
+  margin: 0;
+}
+
+.todo-element-date {
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.todo-element-delete {
+  color: #E39695;
+  border: 0;
+  font-size: 1rem;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.4s;
+  transform: scale(0.7, 0.7);
+}
+
+.todo-element-edit {
+  color: #E39695;
+  border: 0;
+  font-size: 1rem;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.4s;
+  transform: scale(0.7, 0.7);
+}
+
+.todo-element-delete svg {
+  pointer-events: none;
+  /* nie chcemy obsługi kliknięć na elementy svg - bo takie dodaje użyty fontAwesome */
+}
+
+.todo-element-edit svg {
+  pointer-events: none;
+  /* nie chcemy obsługi kliknięć na elementy svg - bo takie dodaje użyty fontAwesome */
+}
+
+.todo-element-delete:hover {
+  color: #CC444B;
+  transform: rotate(25deg) scale(1.1, 1.1);
+}
+
+.todo-element-text {
+  color: white;
+  font-size: 0.9rem;
+}
+
+/*tu sie koncza*/

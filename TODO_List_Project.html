@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang='pl'>
+
+<head>
+  <meta charset="utf-8">
+  <title>TODO</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Poiret+One" rel="stylesheet">
+</head>
+
+<body>
+  <div class="circle_big"></div>
+  <div class="circle_small"></div>
+  <div class="circle_super_small"></div>
+  <button class="button todo-color-change">Change color</button>
+  <div class='todo-content'>
+
+    <form class='todo-form' id="todoForm">
+      <div class='todo-form-row' id='todoFormRow'>
+        <label class="todo-form-label" for="todoMessage">To do ...</label>
+        <textarea class="todo-form-message" name="todoMessage" id="todoMessage"></textarea>
+      </div>
+      <div class="todo-Form-row">
+        <button type="submit" class="button todo-form-button">Add item</button>
+      </div>
+    </form>
+
+    <section class='todo-list-content'>
+      <header class='todo-list-header'>
+        <a class='todo-list-title'>
+          Todo List 
+        </a>
+        <form class="todo-list-search-form">
+          <input type="search" id="todoSearch" class="todo-list-search" placeholder="Search Task ...">
+        </form>
+      </header>
+      <div class="todo-list" id="todoList"></div>
+    </section>
+  </div>
+  <script src="js/script.js"> </script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+</body>
+
+</html>
